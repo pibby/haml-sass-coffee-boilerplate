@@ -1,0 +1,75 @@
+/*     Base styles     */
+$columns: 12;
+$gutter: 40px;
+
+%grid {
+  @extend %cf;
+  margin: 0 ($gutter/2)*-1;
+}
+%mob-cont {
+  @include cols(12);
+  text-align: left;
+}
+
+.wrapper {
+  @extend %cf;
+  max-width: 35.5em;
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+  @include mq(s) {
+    max-width: 48em;
+  }
+  @include mq(m) {
+    max-width: 60em;
+  }
+  @include mq(l) {
+    max-width: 71.25em;
+  }
+}
+.row {
+  @extend %grid;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  font: 100%/1.5 "Helvetica Neue", Arial, sans-serif;
+  margin: 0 auto;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+img::selection {
+  background: transparent;
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/* Fluid images */
+img, object {
+  height: auto;
+  max-width: 100%;
+  _width: 100%;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+  &:visited {
+  }
+  &:hover {
+  }
+  &:active {
+  }
+}

@@ -1,0 +1,14 @@
+.footer {
+  @extend %mob-cont;
+  text-align: center;
+  @include rems(15);
+  @include mq(s) {
+    @include rems(16);
+  }
+  @include mq(l) {
+    @include rems(14);
+  }
+  @include mq(xxxl) {
+    @include rems(16);
+  }
+}

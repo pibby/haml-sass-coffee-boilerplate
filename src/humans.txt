@@ -1,0 +1,12 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Katie Harron    -- Front-End Web Developer 
+                    -- http://dev.pibby.com/about/
+
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3, Sass, Gulp
