@@ -1,6 +1,6 @@
 /*     Mixins and helpers     */
 @mixin mq($breakpoint) {
-  @else if $breakpoint == xxxl {
+  @if $breakpoint == xxxl {
     @media (min-width: 90em) { @content ; } //1440
   }
   @else if $breakpoint == xxl {
