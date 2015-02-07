@@ -7,8 +7,8 @@ $gutter: 40px;
   margin: 0 ($gutter/2)*-1;
 }
 %mob-cont {
-  @include cols(12);
   text-align: left;
+  @include cols(12);
 }
 
 .wrapper {
