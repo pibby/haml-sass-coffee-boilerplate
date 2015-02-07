@@ -16,7 +16,7 @@ $gutter: 40px;
   max-width: 35.5em;
   width: 100%;
   margin: auto;
-  padding: 20px;
+  padding: $gutter/2;
   @include mq(s) {
     max-width: 48em;
   }

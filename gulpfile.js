@@ -38,7 +38,8 @@ gulp.task('serve', function() {
 		server: {
 			baseDir: './dist'
 		},
-		host: 'localhost'
+		host: 'localhost',
+		port: 4000
     });
 });
 
