@@ -1,14 +1,11 @@
-source 'http://rubygems.org'
-
-ruby '2.2.2'
-
+source 'https://rubygems.org'
 gem 'sinatra'
+gem 'sinatra-asset-pipeline'
 gem 'haml'
-gem 'sprockets'
-gem 'sass', :require => 'sass'
-gem 'coffee-script', :require => "coffee_script"
-gem 'therubyracer'
+gem 'eventmachine', '>=1.0.4'
 
 group :development do
-  gem 'shotgun'
+  gem 'guard'
+  gem 'guard-livereload'
+  gem 'rack-livereload'
 end

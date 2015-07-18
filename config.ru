@@ -1,17 +1,9 @@
-$:.unshift File.expand_path("../", __FILE__)
-require 'sinatra'
-require 'haml'
-require 'sass'
-require 'sprockets'
-require 'application'
+require 'rack-livereload'
+require './app'
 
-map '/assets' do
-  environment = Sprockets::Environment.new
-  environment.append_path 'assets/javascripts'
-  environment.append_path 'assets/stylesheets'
-  run environment
+if ENV["RACK_ENV"] == "development"
+  require 'rack-livereload'
+  use(Rack::LiveReload, live_reload_port: 35730)
 end
 
-map '/' do
-  run Application
-end
+run App
