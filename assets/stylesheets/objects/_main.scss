@@ -1,0 +1,16 @@
+.main {
+  @extend %mob-cont;
+}
+.main__content {
+  @include cols(12);
+  @include mq(l) {
+    @include cols(8);
+  }
+}
+.main__related {
+  background: $blue-light;
+  @include cols(12);
+  @include mq(l) {
+    @include cols(4);
+  }
+}
