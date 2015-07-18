@@ -30,6 +30,7 @@ GEM
       tilt
     hike (1.2.3)
     http_parser.rb (0.6.0)
+    json (1.8.3)
     listen (3.0.2)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
@@ -80,6 +81,9 @@ GEM
       tilt (~> 1.1)
     thor (0.19.1)
     tilt (1.4.1)
+    uglifier (2.7.1)
+      execjs (>= 0.3.0)
+      json (>= 1.8.0)
 
 PLATFORMS
   ruby
@@ -90,8 +94,10 @@ DEPENDENCIES
   guard-livereload
   haml
   rack-livereload
+  sass
   sinatra
   sinatra-asset-pipeline
+  uglifier
 
 BUNDLED WITH
    1.10.5
