@@ -2,9 +2,9 @@
   @extend %mob-cont;
   background: $blue-dark;
   color: $white;
-  &__nav {
-    @include cols(12);
-  }
+}
+.header__nav {
+  @include cols(12);
   ul {
     list-style: none;
     padding: 0;
