@@ -5,7 +5,7 @@
 
     Katie Harron    -- Front-End Web Developer 
                     -- https://pibby.com
-										-- https://github.com/pibby
+                    -- https://www.github.com/pibby
 
 # TECHNOLOGY COLOPHON
 
