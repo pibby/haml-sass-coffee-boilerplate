@@ -1,4 +1,4 @@
-require 'rack-livereload'
+#require 'rack-livereload'
 require './app'
 
 if ENV["RACK_ENV"] == "development"
