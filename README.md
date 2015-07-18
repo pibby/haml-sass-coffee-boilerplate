@@ -25,5 +25,6 @@ To automatically reload pages when you make changes to its source code, run in a
 ## Deploying
 
 Ready for Heroku
+
 		heroku apps:create app-name
 		git push heroku master
