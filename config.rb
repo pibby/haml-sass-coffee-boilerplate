@@ -61,6 +61,9 @@ configure :build do
   # Minify Javascript on build
   activate :minify_javascript
 
+  # Optimize Images
+  activate :imageoptim
+
   # Enable cache buster
   activate :asset_hash
 

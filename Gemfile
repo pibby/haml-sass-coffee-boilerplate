@@ -6,6 +6,8 @@ ruby "2.2.2"
 gem "middleman", "~>3.3.12"
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
+# Optimize images
+gem "middleman-imageoptim"
 
 # For Heroku Deploy
 gem "puma"
