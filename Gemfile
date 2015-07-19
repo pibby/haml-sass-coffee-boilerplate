@@ -1,14 +1,14 @@
-source 'https://rubygems.org'
-ruby '2.2.2'
-gem 'sinatra'
-gem 'sinatra-asset-pipeline'
-gem 'haml'
-gem 'sass'
-gem 'uglifier'
-gem 'eventmachine', '>=1.0.4'
+# If you do not have OpenSSL installed, update
+# the following line to use "http://" instead
+source "https://rubygems.org"
+ruby "2.2.2"
 
-group :development do
-  gem 'guard'
-  gem 'guard-livereload'
-  gem 'rack-livereload'
-end
+gem "middleman", "~>3.3.12"
+# Live-reloading plugin
+gem "middleman-livereload", "~> 3.1.0"
+
+# For Heroku Deploy
+gem "puma"
+gem "rack-contrib"
+gem "rack-ssl"
+gem "rack-cache"

@@ -1,4 +1,7 @@
-require 'sinatra/asset_pipeline/task'
-require './app'
+require 'bundler/setup'
 
-Sinatra::AssetPipeline::Task.define! App
+namespace :assets do
+  task :precompile do
+    sh 'middleman build'
+  end
+end
