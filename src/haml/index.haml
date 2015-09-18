@@ -1,0 +1,58 @@
+!!! 5
+%html(lang="en")
+  %head
+    %meta(charset="utf-8")
+    %meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    %title Katie Harron's Boilerplate
+
+    %meta(name="viewport" content="width=device-width, initial-scale=1")
+    %link(href="/css/styles.css" rel="stylesheet")
+    -#%link(href="/css/styles.min.css" rel="stylesheet")
+
+    %meta(name="description" content="")
+    %meta(name="keywords" content="")
+    %meta(name="robots" content="index,follow")
+
+    %link(href="/favicon.ico" rel="shortcut icon")
+    %link(href="/apple-touch-icon-precomposed.png" rel="apple-touch-icon")
+    %link(href="/humans.txt" rel="author")
+    %link(href="" rel="canonical")
+
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  %body
+    %header.header(role="banner")
+      .wrapper
+        .row
+          %nav(role="navigation")
+            %ul
+              %li Menu Item
+              %li Menu Item
+
+    %main.main(role="main")
+      .wrapper
+        .row
+          %article
+            %h1 Page Title
+            %p Adipisicing consequatur quae aut ea soluta, quasi in a nostrum culpa! Obcaecati deserunt minima suscipit consectetur ut quibusdam. Voluptatem odio ratione et doloremque excepturi vel illum. Commodi aliquid libero consequuntur?
+
+    %aside.related(role="complementary")
+      .wrapper
+        .row
+          %h2 Related Content
+          %p Amet est reiciendis laboriosam nemo incidunt tempore ipsam numquam molestiae tempore illum quod? Ea laborum sapiente dicta quaerat provident! Atque pariatur suscipit provident harum ullam! Maxime beatae deserunt atque aut!
+
+    %footer.footer(role="contentinfo")
+      .wrapper
+        .row
+          %p Copyright 2015
+
+    %script(src="/js/scripts.js")
+    -#%script(src="/js/scripts.min.js")
+
+  -#
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    :javascript
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create','UA-XXXXX-X');ga('send','pageview');

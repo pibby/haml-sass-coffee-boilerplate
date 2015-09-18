@@ -4,9 +4,9 @@
 # TEAM
 
     Katie Harron    -- Front-End Web Developer 
-                    -- https://pibby.com
-                    -- https://www.github.com/pibby
+                    -- https://pibby.com/about/
+
 
 # TECHNOLOGY COLOPHON
 
-    HAML, Sass, CoffeeScript, Sinatra
+    HTML5, CSS3, Haml, Sass, CoffeeScript, Gulp

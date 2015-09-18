@@ -1,0 +1,4 @@
+.header {
+  @extend %mob-cont;
+  @include rems(15);
+}

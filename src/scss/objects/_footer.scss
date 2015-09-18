@@ -1,11 +1,6 @@
 .footer {
   @extend %mob-cont;
-  background: $gray-dark;
-  color: $white;
-}
-.footer__content {
   text-align: center;
-  @include cols(12);
   @include rems(14);
   @include mq(l) {
     @include rems(16);

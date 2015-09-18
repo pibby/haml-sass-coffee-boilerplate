@@ -33,15 +33,15 @@ $gutter: 40px;
 
 html {
   box-sizing: border-box;
+  height: 100%;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
 body {
-  background: $white;
-  color: $gray-dark;
   font: 100%/1.5 "Helvetica Neue", Arial, sans-serif;
   margin: 0 auto;
+  min-height: 100%;
   overflow-x: hidden;
 }
 
@@ -64,16 +64,12 @@ img, object {
 }
 
 a {
-  color: $link;
   text-decoration: none;
   transition: all 0.3s ease-out;
   &:visited {
-    color: $link-visited;
   }
   &:hover {
-    color: $link-hover;
   }
   &:active {
-    color: $link;
   }
 }
