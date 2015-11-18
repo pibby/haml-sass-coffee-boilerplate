@@ -1,40 +1,49 @@
-/*     Mixins and helpers     */
+// Mixins and helpers
 @mixin mq($breakpoint) {
-  @if $breakpoint == xxxl {
-    @media (min-width: 90em) { @content ; } //1440
-  }
-  @else if $breakpoint == xxl {
-    @media (min-width: 80em) { @content ; } //1280
-  }
-  @else if $breakpoint == xl {
-    @media (min-width: 71.25em) { @content ; } //1140
-  }
-  @else if $breakpoint == l {
-    @media (min-width: 60em) { @content ; } //960
-  }
-  @else if $breakpoint == m {
-    @media (min-width: 48em) { @content ; } //768
-  }
-  @else if $breakpoint == s {
-    @media (min-width: 35.5em) { @content ; } //568
-  }
-  @else if $breakpoint == xs {
-    @media (min-width: 30em) { @content ; } //480
-  }
+	@if $breakpoint == xxxl-3 {
+		@media (min-width: 160em) { @content ; } //2560
+	}
+	@else if $breakpoint == xxxl-2 {
+		@media (min-width: 120em) { @content ; } //1920
+	}
+	@else if $breakpoint == xxxl {
+		@media (min-width: 105em) { @content ; } //1680
+	}
+	@else if $breakpoint == xxl-2 {
+		@media (min-width: 90em) { @content ; } //1440
+	}
+	@else if $breakpoint == xxl {
+		@media (min-width: 80em) { @content ; } //1280
+	}
+	@else if $breakpoint == xl {
+		@media (min-width: 71.25em) { @content ; } //1140
+	}
+	@else if $breakpoint == l {
+		@media (min-width: 60em) { @content ; } //960
+	}
+	@else if $breakpoint == m {
+		@media (min-width: 48em) { @content ; } //768
+	}
+	@else if $breakpoint == s {
+		@media (min-width: 35.5em) { @content ; } //568
+	}
+	@else if $breakpoint == xs {
+		@media (min-width: 30em) { @content ; } //480
+	}
   @else if $breakpoint == 2x {
     @media
-    only screen and (-webkit-min-device-pixel-ratio: 2),
-    only screen and (min--moz-device-pixel-ratio: 2),
-    only screen and (-o-min-device-pixel-ratio: 2/1),
-    only screen and (min-device-pixel-ratio: 2),
-    only screen and (min-resolution: 192dpi),
-    only screen and (min-resolution: 2dppx) {
+      only screen and (-webkit-min-device-pixel-ratio: 2),
+      only screen and (min--moz-device-pixel-ratio: 2),
+      only screen and (-o-min-device-pixel-ratio: 2/1),
+      only screen and (min-device-pixel-ratio: 2),
+      only screen and (min-resolution: 192dpi),
+      only screen and (min-resolution: 2dppx) {
       @content;
-    } //retina
+    }
   }
 }
 
-@mixin border-radius($radius: 5px) {
+@mixin border-radius($radius: 4px) {
   border-radius: $radius;
 }
 
@@ -72,7 +81,7 @@
   font-size: $rem-size + rem; 
 }
 
-/*     Grid components     */
+// Grid components
 @mixin cols($i: 12, $total: 12) {
   float: left;
   padding: 0 $gutter/2;
@@ -105,7 +114,7 @@
   margin: $mt + px $mr + px $mb + px $ml + px;
   margin: $mtv + rem $mrv + rem $mbv + rem $mlv + rem;
 }
-
+ 
 @mixin pad($pt: 0, $pr: 0, $pb: 0, $pl: 0) { 
   $ptv: $pt / $font-size;
   $prv: $pr / $font-size;
@@ -154,14 +163,16 @@
 .clear {
   clear: both;
 }
-/* responsive videos */
+.hidden {
+  display: none;
+}
+// responsive videos
 .video figure {
   height: 0;
   overflow: hidden;
   padding-bottom: 56.25%;
   position: relative;
 }
-
 .video iframe, .video object, .video embed {
   height: 100%;
   left: 0;

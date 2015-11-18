@@ -4,6 +4,7 @@ var gulp = require('gulp'),
 	autoprefixer = require('gulp-autoprefixer'),
 	minifycss = require('gulp-minify-css'),
 	haml = require('gulp-ruby-haml'),
+	gzip = require('gulp-gzip'),
 	coffee = require('gulp-coffee'),
 	uglify = require('gulp-uglify'),
 	imagemin = require('gulp-imagemin'),
@@ -11,7 +12,7 @@ var gulp = require('gulp'),
 	concat = require('gulp-concat'),
 	notify = require('gulp-notify'),
 	cache = require('gulp-cache'),
-	server = require('gulp-server-livereload'),
+	browserSync = require('browser-sync').create(),
 	del = require('del');
 
 // Paths
@@ -30,20 +31,21 @@ var paths = {
 	}
 };
 
-// Server initiation and livereload, opens server in browser
-gulp.task('webserver', function() {
-  gulp.src('dist')
-    .pipe(server({
-      livereload: true,
-      open: true,
-			port: 4000
-    }));
+// Server initiation and browserSync
+gulp.task('serve', function() {
+    browserSync.init({
+        server: {
+            baseDir: "./dist/"
+        }
+    });
 });
 
 // Get and render all .haml files recursively 
 gulp.task('haml', function () {
 	return gulp.src(paths.haml)
 		.pipe(haml({doubleQuote: true}))
+		.pipe(gulp.dest(paths.dist.html))
+		.pipe(gzip())
 		.pipe(gulp.dest(paths.dist.html))
 		.pipe(notify({ message: 'Haml task complete' }));
 });
@@ -56,6 +58,8 @@ gulp.task('styles', function() {
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(minifycss())
 		.pipe(gulp.dest(paths.dist.css))
+		.pipe(gzip())
+		.pipe(gulp.dest(paths.dist.css))
 		.pipe(notify({ message: 'Styles task complete' }));
 });
 
@@ -66,6 +70,8 @@ gulp.task('coffee', function() {
 		.pipe(gulp.dest(paths.dist.js))
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(uglify())
+		.pipe(gulp.dest(paths.dist.js))
+		.pipe(gzip())
 		.pipe(gulp.dest(paths.dist.js))
 		.pipe(notify({ message: 'Scripts task complete' }));
 });
@@ -90,7 +96,7 @@ gulp.task('clean', function(cb) {
 });
 
 // Default task
-gulp.task('default', ['webserver'], function() {
+gulp.task('default', ['serve'], function() {
     gulp.start('haml', 'styles', 'coffee', 'images', 'extras', 'watch');
 });
 

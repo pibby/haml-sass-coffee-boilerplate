@@ -1,22 +1,13 @@
-/*     Base styles     */
+// Base styles
 $columns: 12;
 $gutter: 40px;
 
-%grid {
-  @extend %cf;
-  margin: 0 ($gutter/2)*-1;
-}
-%mob-cont {
-  text-align: left;
-  @include cols(12);
-}
-
 .wrapper {
   @extend %cf;
-  max-width: 35.5em;
   width: 100%;
-  margin: auto;
-  padding: $gutter/2;
+  max-width: 35.5em;
+  margin: 0 auto;
+  padding: 20px 0;
   @include mq(s) {
     max-width: 48em;
   }
@@ -24,11 +15,22 @@ $gutter: 40px;
     max-width: 60em;
   }
   @include mq(l) {
-    max-width: 71.25em;
+    max-width: 66em;
   }
 }
-.row {
-  @extend %grid;
+.wrapper + .wrapper {
+  padding-top: 0;
+  margin-top: ($gutter/2)*-1;
+}
+.wrapper .wrapper {
+  margin-left: ($gutter/2)*-1;
+  margin-right: ($gutter/2)*-1;
+}
+
+// Default mobile container
+%mob-cont {
+  @include cols(12);
+  text-align: left;
 }
 
 html {
@@ -44,19 +46,7 @@ body {
   min-height: 100%;
   overflow-x: hidden;
 }
-
-img::selection {
-  background: transparent;
-}
-
-audio,
-canvas,
-img,
-video {
-    vertical-align: middle;
-}
-
-/* Fluid images */
+// Fluid images
 img, object {
   height: auto;
   max-width: 100%;
